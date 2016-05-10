@@ -1,0 +1,101 @@
+@font-face {
+    font-family: FuturaStdBoldOblique;
+    src: url('fonts/FuturaStdBoldOblique.eot');
+    src: url('fonts/FuturaStdBoldOblique.eot') format('embedded-opentype'),
+         url('fonts/FuturaStdBoldOblique.woff2') format('woff2'),
+         url('fonts/FuturaStdBoldOblique.woff') format('woff'),
+         url('fonts/FuturaStdBoldOblique.ttf') format('truetype'),
+         url('fonts/FuturaStdBoldOblique.svg#FuturaStdBoldOblique') format('svg');
+}
+
+@media only screen and (min-width: 1024px){
+.right{
+	float: right;
+	margin-top: 1%;
+	margin-right: 2%;
+
+}
+.left{
+	float: left;
+	margin-top: 1%;
+	margin-left: 2%;
+}
+.text{
+	font-size:15px;
+    font-style:oblique;
+    font-weight:bold;
+    font-family: 'FuturaStdBoldOblique';
+	}
+.time{
+	font-size: 75px;
+    font-style:oblique;
+    font-weight:bold;
+    font-family: 'FuturaStdBoldOblique';
+	}
+	.imgRight{
+		position: fixed;
+		right: 20%;
+		bottom:15.5%;
+	}
+
+	.imgLeft{
+		position: fixed;
+		left: 15%;
+		bottom: 7.5%;
+	}
+	img.img_bus{
+		width:70%; 
+		 height:27%;
+	}
+	img.img_boat{
+		 width:70%; 
+		 height:27%;
+	}
+}
+
+@media only screen and (min-width: 2560px){
+.right{
+	float: right;
+	margin-top: 3%;
+	margin-right: 5%;
+
+}
+.left{
+	float: left;
+	margin-top: 3%;
+	margin-left: 5%;
+}
+.text{
+	font-size:25px;
+    font-style:oblique;
+    font-weight:bold;
+    font-family: 'FuturaStdBoldOblique';
+}
+.time{
+	font-size: 115px;
+    font-style:oblique;
+    font-weight:bold;
+    font-family: 'FuturaStdBoldOblique';
+}
+}
+
+.imgRight{
+	position: fixed;
+	right: 20%;
+	bottom:15.5%;
+}
+
+.imgLeft{
+	position: fixed;
+	left: 15%;
+	bottom: 7.5%;
+}
+img.img_bus{
+	width:70%; 
+	 height:27%;
+}
+img.img_boat{
+	 width:70%; 
+	 height:27%;
+}
+}
