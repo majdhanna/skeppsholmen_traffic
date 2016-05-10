@@ -1,6 +1,6 @@
 <?php
 
-$str = file_get_contents('http://api.sl.se/api2/realtimedepartures.json?key=d4b86662a79c47678342b698bd238887&siteid=1026&timewindow=60');
+$str = file_get_contents('http://api.sl.se/api2/realtimedepartures.json?key=fe9955f0683f463395b2e49c60753b4a&siteid=1026&timewindow=60');
 	$json = json_decode($str, true);
 
 	$text = (isset($json['ResponseData']['StopPointDeviations'][0]['Deviation']['Text'])) ?: '';
@@ -40,7 +40,7 @@ $str = file_get_contents('http://api.sl.se/api2/realtimedepartures.json?key=d4b8
 	else {
 		$error1 = "Error";
 	}
-	$str2 = file_get_contents('http://api.sl.se/api2/realtimedepartures.json?key=d4b86662a79c47678342b698bd238887&siteid=314&timewindow=60');
+	$str2 = file_get_contents('http://api.sl.se/api2/realtimedepartures.json?key=fe9955f0683f463395b2e49c60753b4a&siteid=314&timewindow=60');
 
 	$json2 = json_decode($str2, true);
 	$text2 = (isset($json2['ResponseData']['StopPointDeviations'][0]['Deviation']['Text'])) ?: '';
