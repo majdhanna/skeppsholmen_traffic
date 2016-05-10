@@ -83,7 +83,7 @@
        
         
 
-    setTimeout(setBackground, 500000);
+    setTimeout(setBackground, 20000000);
     }
     setBackground();
      body.css({'background':backgrounds[current],
