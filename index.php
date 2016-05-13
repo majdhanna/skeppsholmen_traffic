@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta http-equiv="refresh" content="6000">
 	<title>Time Tabel</title>
 	<link rel="stylesheet" type="text/css" href="Style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 </head>
 
-<body>
-
-
-       
-<br/>
+<body>       
+<br/><br/>
 <br/>
 <br/>
 <div class="right">
@@ -120,7 +118,8 @@
     getLocation();
     myTimer(global_sl_bus_time,global_sl_boat_time);
 
-    setInterval(function(){ myTimer(global_sl_bus_time,global_sl_boat_time); }, 500); 
+
+    setInterval(function(){ myTimer(global_sl_bus_time,global_sl_boat_time); }, 1000); 
     setInterval(function(){ getLocation(); }, 10000);
     
     function getLocation() {
@@ -264,15 +263,18 @@
         seconds_bus = checkTime(seconds_bus);
         hours_bus = checkTime(hours_bus);
         minutes_bus = checkTime(minutes_bus);
-        if((ms_bus<=0) && (ms_bus => -50000)){
+        if((ms_bus<=0) && (ms_bus => -1000000)){
             document.getElementById("demo1").innerHTML = "Nu";       
                 
           }
 
         if(ms_bus>0){
-            document.getElementById("demo1").innerHTML = hours_bus+":"+minutes_bus+":"+seconds_bus;
+            if(hours_bus>99){
+            document.getElementById("demo1").innerHTML = "00"+":"+minutes_bus+":"+seconds_bus;  
+            }
+            else document.getElementById("demo1").innerHTML = hours_bus+":"+minutes_bus+":"+seconds_bus;
         }
-        if (ms_bus<-50000){
+        if (ms_bus<-1000000){
                 document.getElementById("demo2").innerHTML = "Error..";
             }
 
@@ -295,6 +297,9 @@
 
            if(ms_boat>0){
             console.log(minutes_boat);
+            if(hours_boat>99)
+            document.getElementById("demo2").innerHTML = "00"+":"+minutes_boat+":"+seconds_boat;
+            else 
             document.getElementById("demo2").innerHTML = hours_boat+":"+minutes_boat+":"+seconds_boat;
             }
             if((ms_boat<=0) && (ms_boat => -1000000)){
