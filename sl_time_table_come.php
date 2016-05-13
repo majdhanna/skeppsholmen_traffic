@@ -1,6 +1,8 @@
 <?php
 
-$str = file_get_contents('http://api.sl.se/api2/realtimedepartures.json?key=<your SL api key>&siteid=1026&timewindow=60');
+require_once('config.php');
+
+$str = file_get_contents('http://api.sl.se/api2/realtimedepartures.json?key=' . API_KEY . '&siteid=1026&timewindow=60');
 	$json = json_decode($str, true);
 
 	$text = (isset($json['ResponseData']['StopPointDeviations'][0]['Deviation']['Text'])) ?: '';
